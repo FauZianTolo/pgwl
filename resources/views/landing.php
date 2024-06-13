@@ -258,7 +258,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>&copy; 2024 Joga Journey WebGIS. Make by Muhammad Nashan Fauzian.</p>
+                <p>&copy; 2024 Jogja Journey WebGIS. Make by Muhammad Nashan Fauzian.</p>
             </div>
         </div>
     </div>

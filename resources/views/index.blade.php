@@ -247,9 +247,6 @@
 
                     "<div class='d-flex flex-row mt-2'>" +
 
-                    "<a href='{{ url('') }}/" + feature.properties.id +
-                    "' class='btn btn-info me-2'><i class='fa-solid fa-car-side'></i></a>" +
-
                     "<a href='{{ url('edit-point') }}/" + feature.properties.id +
                     "' class='btn btn-warning me-2'><i class='fa-solid fa-pen-to-square'></i></a>" +
 
@@ -343,6 +340,11 @@
             })
             .catch(error => console.log(error));
 
+            $.getJSON("{{ route('api.polylines') }}", function(data) {
+            polyline.addData(data);
+            map.addLayer(polyline);
+        });
+
         /* GeoJSON polygon */
         var polygon = L.geoJson(null, {
             onEachFeature: function(feature, layer) {
@@ -358,12 +360,11 @@
                     .id +
                     "' class='btn btn-warning me-2'><i class='fa-solid fa-pen-to-square'></i></a>" +
 
-                    "<form action='{{ url('delete-polygon') }}/" + feature
-                    .properties.id + "' method='POST'>" +
+                    "<form action='{{ url('delete-polygon') }}/" + feature.properties.id + "' method='POST'>" +
                     '{{ csrf_field() }}' +
                     '{{ method_field('DELETE') }}' +
 
-                    "<button type='submit' class='btn btn-danger' onclick='return confirm(Yakin Anda akan menghapus data ini?)'><i class='fa-solid fa-trash-can'></i></button>"
+                    "<button type='submit' class='btn btn-danger' onclick='return confirm(`Yakin Anda akan menghapus data ini?`)'><i class='fa-solid fa-trash-can'></i></button>"
 
                 "</form>"
 

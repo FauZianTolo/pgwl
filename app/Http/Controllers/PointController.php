@@ -176,7 +176,7 @@ class PointController extends Controller
         $point = $this->point->find($id);
 
         $data = [
-            'title' => 'Edit Point',
+            'title' => 'Routing to Destination',
             'point' => $point,
             'id' => $id,
         ];
