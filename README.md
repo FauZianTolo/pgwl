@@ -1,6 +1,6 @@
 # WebGIS Wisata Kota Yogyakarta
 
-![Banner](storage/assets/yogyakarta.jpg)
+![Banner](storage/app/public/assets/landing.png)
 
 Proyek WebGIS ini menyediakan peta interaktif yang menampilkan berbagai tempat wisata di Kota Yogyakarta. Dengan menggunakan teknologi GIS, pengguna dapat menjelajahi lokasi wisata dengan mudah dan mendapatkan informasi detail mengenai tempat-tempat tersebut.
 
